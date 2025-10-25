@@ -26,6 +26,7 @@ function Header() {
           <a href="#objectives">Objectives</a>
           <a href="#domains">Domains</a>
           <a href="#contact">Contact</a>
+          <button className="btn-nav">Login</button>
           <button className="btn-nav">Sign Up</button>
         </nav>
         <button 

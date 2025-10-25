@@ -1,0 +1,96 @@
+.domains-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.domain-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid rgba(15, 23, 42, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.domain-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--domain-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.domain-card:hover::before {
+  transform: scaleX(1);
+}
+
+.domain-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--domain-color);
+}
+
+.domain-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.domain-card:hover .domain-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.domain-card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem;
+  color: #111827;
+  font-weight: 700;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.project-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.project-list svg {
+  color: var(--domain-color);
+  flex-shrink: 0;
+}
+
+.domain-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--domain-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: gap 0.3s ease;
+}
+
+.domain-link:hover {
+  gap: 0.75rem;
+}
